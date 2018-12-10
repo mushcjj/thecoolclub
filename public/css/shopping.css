@@ -1,0 +1,90 @@
+
+.my_w1{
+    position:fixed;
+    top:0;
+    z-index:100000;
+    display: none;
+
+}
+.myheight{
+   width: 1000px;
+   height:48.1rem;
+    background:#ccc;
+    opacity: .5;
+}
+.my_idx{
+    position:relative;
+background-color: #fff;
+    /*right: 0;*/
+    /*z-index: 2;*/
+}
+.tubiao{
+    width: 18px;
+    height: 100%;
+    border:1px solid #818182;
+    background: #818182;
+
+}
+.my_w{
+    width: 2rem;
+}
+.my_pb_color{
+    width:460px;
+    border: 1px solid transparent;
+    border-bottom-color: #818182;
+}
+.my_gd{
+    overflow-y: scroll;
+}
+.xsj{
+   border:5px solid transparent;
+    border-bottom-color: #1b1e21;
+}
+
+.my_pt3{
+    padding-top:15rem;
+}
+.my_pt5{
+    padding-top:5.5rem;
+}
+.bg_p6 {
+    background: #979798;
+    height:5rem;
+
+}
+.my_gui{
+    width:15px;
+    height: 15px;
+}
+.my_bg{
+    opacity:0.4;
+}
+.my_ld{
+    width:15px;
+    height:15px;
+}
+.p-auto{
+    text-align: center;
+    line-height: 5rem;
+}
+.my_bb{
+    margin-top: 81px;
+}
+.my_m{
+    margin-bottom: 93px;
+    margin-top:110px;
+    display: block;
+}
+.my_k{
+    margin-left:110px;
+}
+.my_btn{
+    margin-top:20px;
+    margin-left:170px;
+}
+.my_overflow{
+    width:460px;
+    height:460px;
+    overflow: auto;
+
+}

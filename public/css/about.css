@@ -1,0 +1,21 @@
+.about{
+    background: #d9d9d9;
+    font-size:14px;
+}
+.my_y{
+    position:relative;
+    background: #e3e3e3;
+    width:170px;
+    height:80px;
+
+ }
+.my_t{
+    position:absolute;
+    top:0;
+    left: 0;
+    right:0;
+    bottom:0;
+    margin:auto;
+    width: 80px;
+    max-width:120px;
+}

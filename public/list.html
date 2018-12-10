@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/base.css">
+  
+    <link rel="stylesheet" href="css/e.css">
+    
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/e.js"></script>
+    <script src="js/axios.min.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+    
+    <title>Title</title>
+    <style>
+        body{
+            background:#f5e4f5
+        }
+        .container{
+            margin-top:120px;
+            
+        }
+        #main .list{
+            display:flex;
+            justify-content: space-between;
+            flex-wrap:wrap;
+        }
+        #main .list .item{
+            float: left;
+            transition: 0.3s all linear;
+        }
+        #main .list .item:hover{
+           transform:translate(-10px,-10px);
+        }
+        #main .list .b1{
+            width:280px;
+            height:380px;
+            border:5px solid #000; 
+            position:relative;
+            box-shadow:8px 8px 8px  #777;
+            background: #fff;
+        }
+        #main .list .b1 .b2x{
+            width:250px;
+            height:350px;
+            position:absolute;
+            top:50%;
+            left:50%;
+            margin-left:-125px;
+            margin-top:-175px;   
+        }
+        #main .list .b1 .b2x a img{
+            width:100%;    
+        }
+        #main .list .block{
+            position:absolute;
+            top:100%;
+            left:70%;
+        }
+       
+        #main .list .item .font{
+            display:block;
+            width:280px;
+            text-align:center;
+            font-size:18px;
+        }
+        #main .list .item p{
+            text-align:center
+        }
+    </style>
+</head>
+<body>
+    <table></table>
+    <!--引入头部header.html-->
+    <header id="header"></header>
+    <!--内容部分-->
+    <div class="container" id="products-list">
+        <div class="row" id="main">
+            <div class="col-md-12 list">
+                <div class="item" v-for="item in list">
+                    <div class="b1  zoomIn animated">
+                        <div class="b2x" :style=`background:${item.color}`>
+                            <a href="#" @click.prevent.stop="jump(item.pid)"><img :src=`img/${item.pic}`></a>
+                        </div>
+                    </div>
+                    <div class="mt-2">
+                        <h5 class="font">{{item.title}}</h5>
+                        <p>€16.95</p>
+                    </div>
+                </div>
+                
+                <div class="block">
+                    <el-pagination
+                     layout="prev,pager,next"
+                     :total="total"
+                     :page-count="pageCount"
+                     :page-size="9"
+                     :current-page="pno"
+                     @current-change="handleCurrentChange"
+                     >
+                    </el-pagination>
+                </div>
+            </div>
+    
+        </div>
+    </div>    
+    <!--引入底部-->
+    <footer id="footer"></footer>
+
+
+
+
+    <script src="js/list.js"></script>
+</body>
+</html>

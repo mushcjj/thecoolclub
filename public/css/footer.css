@@ -1,0 +1,14 @@
+.footer{
+    margin-left:50px;
+}
+.footer h5{
+    color:#000;
+    font-size: 15px;
+}
+.my_xl :hover{
+    text-decoration: none;
+}
+.my_xl{
+    line-height: 10px;
+    font-size:15px;
+}

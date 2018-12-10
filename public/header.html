@@ -1,0 +1,113 @@
+
+<header id="header" class="my_body">
+  <div class="header hh " v-bind:class="{abc:isActive}">
+      <div class="header-top">
+        <h5><a href="index.html"><div id="square" class="wobble animated">The Cool Club</div></a></h5>
+        <ul>
+            <li><a href="index.html"><div id="square" class="wobble animated">card games</div></a></li>
+            <li><a href="#" @click.prevent.stop="search(1)"><div id="square" class="wobble animated">cars</div></a></li>
+            <li><a href="#" @click.prevent.stop="search(2)"><div id="square" class="wobble animated">animals</div></a></li>
+            <li><a href="#" @click.prevent.stop="search(3)"><div id="square" class="wobble animated">people</div></a></li>
+            <li><a href="#" @click.prevent.stop="search(4)"><div id="square" class="wobble animated">random</div></a></li>
+            <div class="header-copy">
+                <span>card games</span>
+                <span>cars</span>
+                <span>animals</span>
+                <span>people</span>
+                <span>random</span>
+            </div>
+        </ul>
+        
+        <ul>
+            <li><a href="star.html"><div id="square" class="wobble animated">star wars</div></a></li>
+            <li><a href="about.html"><div id="square" class="wobble animated">about</div></a></li>
+            <li><a href="blog.html"><div id="square" class="wobble animated">blog</div></a></li>
+            <li v-if="!islogin"><a href="#" @click.prevent.stop="tologin"><div id="square" class="wobble animated">signin</div></a></li>
+            <li v-else><a href="#" @click.prevent.stop="signout">signout</a></li>
+            <li class="my_xl">
+                <a href="#" id="dj" @click="showCart">{{cartCount}}</a>
+            </li>
+        </ul>
+    </div>
+  </div>
+  <div class="my_w1 w-100" ref="cart">
+    <div class="row mr-0">
+        <div class="col-lg-8 myheight"></div>
+            <div class="col-lg-4 my_idx">
+                <div class="row my_pb_color">
+                    <div class="col-lg-10"><h6 class="p-3">Your bag 1</h6></div>
+                    <div class="col-lg-2">
+                        <div class="modal-footer">
+                            <button class="border-0 bg-white my_gb" data-dismiss="modal" id="gb" @click="closeCart">X</button>
+                        </div>
+                    </div>
+                </div>
+                <!--未添加商品时-->
+                <div class="my_m" v-if="!islogin">
+                    <img src="img/empty_bag@2x.d3e11ba.png" class="my_k mb-1" alt="">
+                    <p class="font-weight-bold text-center">Your bag is empty<img src="img/guitu.png" class="my_gui" alt=""> </p>
+                    <button class="btn text-white my_btn bg-dark mb-5" @click="tolist">Back to shop</button>
+                </div>
+                <!--添加商品时-->
+                <div v-else>
+                    <ul class="my_overflow">
+                        <li class="row my_pb_color" v-for="item in carts">
+                            <div class="col-lg-3 pt-2 pb-2">
+                                <img :src=`img/${item.pic}` class="w-100" :style=`background:${item.color}`>
+                            </div>
+                            <div class="col-lg-9 pt-2 pb-2" >
+                                <h6>{{item.title}}</h6>
+                                <div class="pt-3 d-flex justify-content">
+                                    <button class="btn " @click="sub(item.pid)">-</button>
+                                    <input type="text" v-model="item.count" class="form-control my_w border-0 m-1">
+                                    <button class="btn " @click="add(item.pid)">+</button>
+                                    <span class="pl-5 ml-5 pt-3">€{{(item.count*16.95).toFixed(2)}}</span>
+                                    </div>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    
+                   
+
+                    
+
+                    <div class="row my_bb mb-5">
+                        <div class="col-lg-9">
+                            <button class="btn bg-dark text-white rounded-0">Order now</button>
+                        </div>
+                        <div class="col-lg-3">
+                        €{{getCartSum}}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 bg_p6 p-auto">
+                        <img src="img/lingdang.png" class="my_ld" alt="">
+                        <span class="font-weight-bold">Free Nl Shipping from €49</span>
+                        <img src="img/lingdang.png" class="my_ld" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<script>
+    var cart=document.getElementById("cart")
+    
+    var dj=document.getElementById("dj")
+    
+    dj.onclick=function () {
+        console.log(this)
+        cart.style.display="block"
+    }
+
+    var gb=document.getElementById("gb")
+    gb.onclick=function(){
+        cart.style.display="none"
+    }
+</script>
+<style>
+    .abc{background:#fff}
+</style>

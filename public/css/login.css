@@ -1,0 +1,76 @@
+/*login主体部分*/
+.login-body{
+    height:700px;
+    border-bottom: 1px solid #6c757d;
+}
+
+/*login-left*/
+.login-left{
+    background:#ffefff;
+    position:relative;
+    perspective: 800px;
+}
+
+.pic-border{
+    width:340px;
+    height:430px;
+    position:absolute;
+    top:0;bottom:0;left:0;right:0;
+    margin:auto;
+    animation: inPic 5s ease 1 normal none; 
+}
+@keyframes inPic{
+    0%{transform:rotateX(90deg) ;}
+    75%{transform:translate3d(0,0,-300px) ;}
+    100%{transform:translate3d(0,0,0);}
+}
+.pic{
+    border:10px solid #000;
+    width:340px;
+    margin:8px;
+    
+}
+.pic img{width:320px; border:10px solid #fff}
+
+/*login-right*/
+.login-right{
+    background:#fff;
+    position:relative;
+}
+.log{
+    position:absolute;
+    top:12rem;
+    right:0;
+    left:20%;
+    bottom:0;
+
+}
+.log li{
+    width:75%;
+}
+.log li input{
+    border:1px solid #606060;
+    outline:none;
+    padding:0.5rem;
+    display: inline-block;
+    width:100%;
+    height:3rem;
+}
+.log-sub {
+    background:black;
+    color:white;
+    font-size:1.5rem;
+    font-weight:bold;
+    line-height:1.5rem;
+    cursor: pointer;
+}
+.log a{
+    color:#606060;
+}
+
+
+
+
+
+
+

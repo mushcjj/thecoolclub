@@ -1,0 +1,109 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    width:100%;
+}
+a:hover{
+    text-decoration: none;
+}
+/*注册列表开始*/
+ul,li{
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    margin-bottom: 2rem;
+}
+.left{
+    margin-left:150px;
+}
+.m-top{
+    margin-top: 8rem;
+}
+ .yzm_img{
+    width:100px; height:30px;
+    vertical-align: baseline;
+}
+canvas{
+    width:88px; height:45px;
+}
+.name_div{
+    width:24rem;
+    margin-left: 15rem;
+    margin-top: 0.5rem;
+}
+.left_m{
+    margin-left: -380px;
+    margin-top:-13px;
+}
+/*备注样式*/
+.agree-check{
+    margin-left:-380px;
+}
+.div_note1{
+    display: none;
+}
+.input_w{
+    width: 300px;
+}
+.input_w1{
+    width: 140px;
+    margin-left: 65px;
+    margin-right:0;
+}
+span{
+    color: red;
+    text-align: center;
+}
+.next-btn{
+    width:40px;
+    color:#333;
+    font-size:18px;
+    margin-top:0px;
+}
+/*注册列表结束*/
+/*右边图片样式*/
+.left_img_box{
+    width: 400px;
+    height: 500px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+.img_a_1{
+    width: 400px;
+    transition: 0.1s all linear;
+    position:absolute;top:50px;
+    z-index:10;
+}
+.effect:hover .img_a_1{
+    transform: scale(0.8) translateY(10%);
+}
+.img_a_2 {
+    position:absolute;top:50px;
+    z-index:1;
+    opacity: 0;
+    transition:all 0.2s  linear;
+}
+.effect:hover .img_a_2 {
+    opacity: 1;
+    transform: translateY(-20%) ;
+}
+
+
+/*弹框*/
+.alert_box_w{
+    display: none;
+    width: 400px;
+    z-index: 11;
+}
+
+
+
+.alert{
+    border:1px solid #ddd;
+    color: black;
+    background-color: #ddd;
+    padding: 10px;
+}

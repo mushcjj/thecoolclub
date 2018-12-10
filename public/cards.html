@@ -1,0 +1,33 @@
+
+<body>
+<div class="container">
+    <!--文字：标题+描述-->
+    <div class="title">
+        <img src="img/1.png" alt="">
+        <div class="title-font">
+            <h4> We partned up with IXXI, Disney &amp; Lucas Film to make illustrations for Star Wars in our Cool Club style. All the designs can be bought directly through the IXXI website.</h4>
+        </div>
+    </div>
+    <div class="mid">
+        <img src="img/wars/StarWars_faces-01.jpg" class="c1">
+        <img src="img/wars/StarWars_faces-02.jpg" class="c2">
+        <img src="img/wars/StarWars_faces-03.jpg" class="c3">
+    </div>
+    <!--//水星-->
+    <div id="shuixing">
+        <iframe src="shuixing.html" frameborder="no" border="none" width="300" height="300";></iframe>
+    </div>
+    <!--火星-->
+    <div id="huoxing">
+        <iframe src="huoxing.html" frameborder="no" border="none" width="1200" height="1400"></iframe>
+    </div>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+    var $mid = $(".mid")
+    $mid.on("click","img",function(e){
+        var img  = $(e.target)
+        img.toggleClass("stand").siblings().removeClass("stand")
+    });
+</script>
+</body>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title class="">register</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/reg.css">
+
+
+    <script src="js/popper.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/ajax.js"></script>
+   
+</head>
+<body>
+    
+    <!--主体内容-->
+      <div class="row m-top" id="reg-app">
+           <div class="col-md-7">
+               <ul class="list-unstyled left">
+                   <li class="d-flex">
+                       <h6>User Name: </h6>
+                       <input type="text" name="name" class="form-control input_w" id="uname" v-model="uname" @blur="unameBlur">
+                       <div>
+                           <span v-cloak v-text="unameRes"></span>
+                        </div>
+                   </li>
+                   <li class="d-flex">
+                       <h6>Telephone Number:</h6>
+                       <input type="text" name="phone" class="form-control input_w" id="tel" v-model="phone" @blur="phoneBlur">
+                       <div>
+                           <span v-cloak v-text="phoneRes"></span>
+                        </div>
+                   </li>
+                   <li class="d-flex">
+                       <h6>User Password:</h6>
+                       <input type="password" name="upwd" class="form-control input_w" id="upwd1" v-model="upwd" @blur="upwdBlur">
+                       <div>
+                           <span v-cloak v-text="upwdRes"></span>
+                        </div>
+                   </li>
+                   <li class="d-flex">
+                       <h6>Confirm Password:</h6>
+                       <input type="password" name="upwd" class="form-control input_w" id="upwd2" v-model="reupwd" @blur="reupwdBlur">
+                       <div>
+                           <span v-cloak v-text="reupwdRes"></span>
+                        </div>
+                   </li>
+                   <li class="d-flex">
+                       <h6>Security Code:</h6>
+                       <input type="text" name="code" class="form-control input_w1" id="yzm" v-model="code" @blur="codeBlur">
+                        <div  class="yzm_img">
+                        <canvas width="90" height="36" id="c3">您的浏览器版本太低，请升级！！</canvas>
+                       </div>
+                       
+                       <h5 class="next-btn" @click="getNext">next</h5>
+                       <div>
+                          <span v-cloak v-text="codeRes"></span>
+                       </div>
+                       
+                   </li>
+
+                   <li class="d-flex">
+                           <input class="agree-check" type="checkbox" checked>
+                           <span class="btn text-dark text-left left_m">
+                               I Have Read And Agreed To The Terms
+                           </span>
+                   </li>
+               </ul>
+               <div class="btn btn-dark name_div" id="b1" @click="reg">Register</div>
+           </div>
+
+           <!--右侧扑克效果-->
+           <div class="col-md-5">
+               <div class="left_img_box effect">
+                   <div class="img_a_1">
+                       <img src="img/animals-no-bg.png" class="img_a" >
+                    </div>
+                   <div class="img_a_2">
+                       <img src="img/animals-no-bg-1.png" class="img_a">
+                    </div>
+               </div>
+           </div>
+      </div>
+
+      <script src="js/reg.js"></script>
+</body>
+</html>

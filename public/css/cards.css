@@ -1,0 +1,45 @@
+body{perspective:500px;background-color: black;padding-top: 50px;text-align: center}
+.container{
+    width:720px;height:900px;
+    margin:auto;
+}
+.mid{text-align: center;margin: auto}
+.mid>img{                                       
+    float:left;
+    margin:20px 30px;
+    width:180px;
+    height:230px;
+    transform: rotateX(30deg) translateY(-10px) translateZ(-10px);
+}
+/*点击事件*/
+.stand{
+    width:180px !important;
+    height:230px !important;
+    outline:5px solid white;
+    overflow: hidden;
+    transition: all .5s linear;
+    transform: rotateX(0deg) translateY(-26px) translateZ(-26px)!important;
+}
+/*悬浮事件*/
+.mid img:hover{
+    transform: scale(1.4);
+    outline:5px solid white;
+    transform: rotateX(30deg) translateY(-10px) translateZ(15px);
+    overflow: hidden;
+    transition: all .2s linear;
+}
+/*文字：标题+描述*/
+/*整体居中*/
+.title{text-align: center;}
+.title-font{
+    color: white;width:440px;font-size: 13px;margin: auto;line-height: 22px
+}
+.container #shuixing{
+    margin-top: -300px;
+    margin-left: -1000px ;
+}
+.container #huoxing{
+   float:right;
+    margin-right: -250px;
+    margin-top: -200px;
+}

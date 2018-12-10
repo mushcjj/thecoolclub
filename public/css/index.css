@@ -1,0 +1,541 @@
+body,h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+/*****************************头部*******************/
+
+/***********************头部内容*********************************/
+.headera{
+    position:relative;
+    width:100%;
+    background:#f5e4f5;
+    height:100%;
+    padding-top:200px;
+}
+.header-middle{
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+.header-middle-l{
+    margin-left: 45px;
+   
+    margin-bottom: 285px;
+   
+}
+.header-middle-l>h2{
+    font-weight:bold;
+    font-size: 24px;
+    font-family: "微软雅黑";
+    margin-bottom: 15px;
+}
+.header-middle-l>.Addbox{
+    margin-top: 30px;
+    display: block;
+    line-height: 40px;
+}
+
+.header-middle-l>.Addbox>span:first-child{ 
+    border: 1px solid #000;
+    width: 130px;
+    height: 40px;
+    float: left; 
+    text-align: center;
+}
+.header-middle-l>.Addbox>span:last-child{
+    border: 1px solid #000;
+    width:220px;
+    height: 40px;
+    float: left;
+    border-left: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+}
+.header-middle-l>.Addbox>span:last-child>span:last-child{
+    display: block;
+    transform: translateY(10px) rotate(12deg);
+    position: absolute;
+    left: 360px;
+    top: 95px;
+    font-size: 14px;
+    opacity: 0;
+    transition: .5s all ;
+}
+.header-middle-l>.Addbox>span:last-child:hover>span:last-child{
+    opacity: 1;
+    transform: translateY(5px) rotate(0deg);
+}
+
+.header-middle-l>.Addbox:after{
+    clear: both;
+    display: block;
+    content:"";
+}
+.f1{
+    width: 100%;
+    position: relative;
+}
+.f1>.f1-content{
+    margin-top: 45px;
+    margin-left: 45px;
+}
+.f1>.f1-content>h4{
+    margin-bottom: 30px;
+}
+.f1>.f1-content>div>a>img{
+    width: 80%;
+    height:80%;
+    transition: .5s all;
+}
+
+.f1>.f1-content>div:hover img:first-child{
+    transform: translateY(65px) scale(.9);
+}
+.f1>.f1-content>.Card-box{
+    width: 400px;
+    float: left;
+    margin-right: 30px;
+}
+.f1>.f1-content>div>a>img:last-child{
+    position: absolute;
+   top: 0px;
+   left: 0px;
+   height: 365px;
+   width: 400px;
+   opacity: 0;
+   transition: .5s all;
+   z-index: -10;
+}
+
+.f1>.f1-content>div:hover img:last-child{
+    opacity: 1;
+    transform: translateY(-10px) scale(1.2);
+}
+.f1>.f1-content>div:nth-child(3)>a>img:last-child{
+    position: absolute;
+    left: 430px;
+}
+
+.f1>.f1-content>div:last-child>a>img:last-child{
+    position: absolute;
+    left: 860px;
+}
+.f1>.f1-content>div:last-child>p{
+    margin-left: 55px;
+}
+.f1>.f1-content>div:last-child>p>span{
+    margin-left: 90px;
+}    
+
+.f1>.f1-content>div:nth-child(3)>p{
+    margin-left: 60px;    
+}
+.f1>.f1-content>div:nth-child(3)>p>span{
+    margin-left: 85px;
+}
+
+.f1>.f1-content>div>p{
+    margin-top: 30px;
+    font-size: 14px;
+    color: #222;
+    margin-left: 70px;
+    word-spacing: 4px;
+    opacity: 0;
+}
+.f1>.f1-content>div:hover>p{
+    opacity: 1;
+}
+.f1>.f1-content>div>p>span{
+    display: block;
+    margin-left: 70px;
+    margin-top: 8px;
+}
+.f1:after{
+    clear: both;
+    display: block;
+    content: '';
+}
+
+.cars{
+    position: relative;z-index:888;
+    width: 100%;
+    margin-top: 30px;
+    background:transparent;
+}
+.cars>.containera{
+    width:100%;
+    padding-left: 45px;
+    height: 500px;
+    overflow: hidden;
+    
+}
+.bg-opa{
+    position: absolute;
+    width:100%;
+    height:500px;
+    
+    opacity:0.35;
+}
+.cars:after{
+    content:"";
+
+}
+
+.containera ul li:hover{
+    transform:scale(1.05)
+}
+.containera ul li{
+    transition:0.3s all linear;
+}
+
+.cars>.containera>.heade{
+    font-family: "Arial, Helvetica, sans-serif";
+    font-weight: bold;
+    padding-top:45px;
+}
+.cars>.containera>ul{
+    list-style: none;
+    margin-top: 20px;
+    width: 8000px;
+    transition: .4s linear;
+}
+.cars>.containera>ul>li{
+    float: left;
+    margin-right: 140px;
+}
+.cars>.containera>ul>li>a{
+    color:#333;
+    display: inline-block;
+    position: relative;
+}
+.cars>.containera>ul>li>a>.bg{
+    border:8px solid #343436;
+    background: #fff;
+    width: 230px;
+    height: 320px;
+    box-shadow: 0px 10px 15px 0px rgba(0,0,0,.5)
+}
+.cars>.containera>ul>li>a>.bg-pic{
+    background: #eaeaea;
+    width: 205px;
+    height: 295px;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+   
+}
+.cars>.containera>ul>li>a>.bg>img{
+    width: 80%;
+    position: absolute;
+    left: 10%;
+    z-index: 5;
+}
+.cars>.containera>ul>li>a>.title{
+    text-align: center;
+    font-size: 13px;
+    color: #000;
+    margin-top: 20px;
+    opacity: 0;
+    transition: .9s linear;
+}
+.cars>.containera>ul>li>a>.title>p:last-child{
+    color: #333;
+    margin-top: 8px;
+}
+.cars>.containera>ul>li>a:hover .title{
+    opacity: 1;
+}
+.cars>.containera>.arrow-left{
+    background: url("../img/arrow/arrow-left.png") no-repeat;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right:100px;
+    top: 40px;
+}
+.cars>.containera>.arrow-right{
+    background: url("../img/arrow/arrow-right.png") no-repeat;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right:60px;
+    top: 40px;
+}
+
+/*动物样式*/
+.Animals{
+    position: relative;
+    width: 100%;
+    position: relative;z-index:888;
+    
+}
+.Animals>.containera{
+    width:100%;
+    padding-left: 45px;
+    height: 500px;
+    overflow: hidden;
+}
+.Animals>.containera>.heade{
+    font-family: "Arial, Helvetica, sans-serif";
+    font-weight: bold;
+    padding-top:45px;
+}
+.Animals>.containera>ul{
+    list-style: none;
+    margin-top: 20px;
+    width: 8000px;
+    transition: .4s linear;
+}
+.Animals>.containera>ul>li{
+    float: left;
+    margin-right: 140px;
+}
+.Animals>.containera>ul>li>a{
+    color:#333;
+    display: inline-block;
+    position: relative;
+}
+.Animals>.containera>ul>li>a>.bg{
+    border:8px solid #343436;
+    background: #fff;
+    width: 230px;
+    height: 320px;
+    box-shadow: 0px 10px 15px 0px rgba(0,0,0,.5)
+}
+.Animals>.containera>ul>li>a>.bg-pic{
+    background: #eaeaea;
+    width: 205px;
+    height: 295px;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+   
+}
+.Animals>.containera>ul>li>a>.bg>img{
+    width: 80%;
+    position: absolute;
+    left: 10%;
+    z-index: 5;
+}
+.Animals>.containera>ul>li>a>.title{
+    text-align: center;
+    font-size: 13px;
+    color: #000;
+    margin-top: 20px;
+    opacity: 0;
+    transition: .9s linear;
+}
+.Animals>.containera>ul>li>a>.title>p:last-child{
+    color: #333;
+    margin-top: 8px;
+}
+.Animals>.containera>ul>li>a:hover .title{
+    opacity: 1;
+}
+.Animals>.containera>.arrow-prev{
+    background: url("../img/arrow/arrow-left.png") no-repeat;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right:100px;
+    top: 40px;
+}
+.Animals>.containera>.arrow-next{
+    background: url("../img/arrow/arrow-right.png") no-repeat;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right:60px;
+    top: 40px;
+}
+
+/*人*/
+.people{
+    position: relative;
+    width: 100%;
+    position: relative;z-index:888;
+}
+.people>.containera{
+    width:100%;
+    padding-left: 45px;
+    height: 500px;
+    overflow: hidden;
+}
+.people>.containera>.heade{
+    font-family: "Arial, Helvetica, sans-serif";
+    font-weight: bold;
+    padding-top:45px;
+}
+.people>.containera>ul{
+    list-style: none;
+    margin-top: 20px;
+    width: 8000px;
+    transition: .4s linear;
+}
+.people>.containera>ul>li{
+    float: left;
+    margin-right: 140px;
+}
+.people>.containera>ul>li>a{
+    color:#333;
+    display: inline-block;
+    position: relative;
+}
+.people>.containera>ul>li>a>.bg{
+    border:8px solid #343436;
+    background: #fff;
+    width: 230px;
+    height: 320px;
+    box-shadow: 0px 10px 15px 0px rgba(0,0,0,.5)
+}
+.people>.containera>ul>li>a>.bg-pic{
+    background: #eaeaea;
+    width: 205px;
+    height: 295px;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+   
+}
+.people>.containera>ul>li>a>.bg>img{
+    width: 80%;
+    position: absolute;
+    left: 10%;
+    z-index: 5;
+}
+.people>.containera>ul>li>a>.title{
+    text-align: center;
+    font-size: 13px;
+    color: #000;
+    margin-top: 20px;
+    opacity: 0;
+    transition: .9s linear;
+}
+.people>.containera>ul>li>a>.title>p:last-child{
+    color: #333;
+    margin-top: 8px;
+}
+.people>.containera>ul>li>a:hover .title{
+    opacity: 1;
+}
+.people>.containera>.arrow-z{
+    background: url("../img/arrow/arrow-left.png") no-repeat;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right:100px;
+    top: 40px;
+}
+.people>.containera>.arrow-y{
+    background: url("../img/arrow/arrow-right.png") no-repeat;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right:60px;
+    top: 40px;
+}
+
+/*随机*/
+.random{
+    position: relative;
+    width: 100%;
+    position: relative;z-index:888;
+}
+.random>.containera{
+    width:100%;
+    padding-left: 45px;
+    height: 500px;
+    overflow: hidden;
+}
+.random>.containera>.heade{
+    font-family: "Arial, Helvetica, sans-serif";
+    font-weight: bold;
+    padding-top:45px;
+}
+.random>.containera>ul{
+    list-style: none;
+    margin-top: 20px;
+    width: 8000px;
+    transition: .4s linear;
+}
+.random>.containera>ul>li{
+    float: left;
+    margin-right: 140px;
+}
+.random>.containera>ul>li>a{
+    color:#333;
+    display: inline-block;
+    position: relative;
+}
+.random>.containera>ul>li>a>.bg{
+    border:8px solid #343436;
+    background: #fff;
+    width: 230px;
+    height: 320px;
+    box-shadow: 0px 10px 15px 0px rgba(0,0,0,.5)
+}
+.random>.containera>ul>li>a>.bg-pic{
+    background: #eaeaea;
+    width: 205px;
+    height: 295px;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+   
+}
+.random>.containera>ul>li>a>.bg>img{
+    width: 80%;
+    position: absolute;
+    left: 10%;
+    z-index: 5;
+}
+.random>.containera>ul>li>a>.title{
+    text-align: center;
+    font-size: 13px;
+    color: #000;
+    margin-top: 20px;
+    opacity: 0;
+    transition: .9s linear;
+}
+.random>.containera>ul>li>a>.title>p:last-child{
+    color: #333;
+    margin-top: 8px;
+}
+.random>.containera>ul>li>a:hover .title{
+    opacity: 1;
+}
+.random>.containera>.slide-z{
+    background: url("../img/arrow/arrow-left.png") no-repeat;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right:100px;
+    top: 40px;
+}
+.random>.containera>.slide-y{
+    background: url("../img/arrow/arrow-right.png") no-repeat;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right:60px;
+    top: 40px;
+}

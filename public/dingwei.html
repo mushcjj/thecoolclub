@@ -1,0 +1,31 @@
+<!DOCTYPE html>  
+<html>
+<head>  
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+<title>Hello, World</title>  
+<style type="text/css">  
+html{height:100%}  
+body{height:100%;margin:0px;padding:0px}  
+#container{height:100%}  
+</style>  
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=u70A5pnNrRtRT1XAgwM5jL2YIVj1Gv97">
+</script>
+</head>  
+<body>  
+<div id="container"></div> 
+<script type="text/javascript"> 
+var map = new BMap.Map("container");
+var point = new BMap.Point(120.140944,30.283075);
+map.centerAndZoom(point, 18);
+
+//添加覆盖物
+//1:创建覆盖物
+var mk = new BMap.Marker(point);
+//2:指定覆盖物类型[动画]
+mk.setAnimation(BMAP_ANIMATION_BOUNCE);
+//3:将覆盖添加地图
+map.addOverlay(mk);
+</script>  
+</body>  
+</html>

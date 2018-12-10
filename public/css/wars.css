@@ -1,0 +1,67 @@
+body{
+    background-color: black;
+}
+.star_wars{
+    margin: 200px;
+}
+/*图片未悬浮前属性（第一个：平行四边形）*/
+.star_wars> .pic-style{
+    width:180px;
+    height:250px;
+    transform:skewX(-10deg);
+    overflow: hidden;
+    transition: all .8s linear;
+    border: none;
+}
+/*鼠标悬浮触发样式*/
+.pic-style:hover{
+    width:210px;
+    height:280px;
+    outline:3px solid white;/*边框*/
+}
+/*JS鼠标点击样式*/
+/*图片站立*/
+.stand{
+    width:210px;
+    height:280px;
+    outline:5px solid white;
+    overflow: hidden;
+    transition: all .8s linear;
+    transform:perspective(6em)rotateX(-1deg)
+}
+/*图片下面购买按键（初始为隐藏）*/
+#buy{
+     width: 87px;
+     height: 20px;
+     border: 3px solid white;
+     color: white;
+     font-size: 14px;
+     text-align: center;
+     margin: 15px 57px;
+ }
+.buy{
+    display: none;
+}
+/*********第二个*/
+.star_wars> .pic-style-first{
+    width:180px;
+    height:250px;
+    overflow: hidden;
+    transition: all .8s linear;
+    border: none;
+    margin-top: -10px;
+    transform: perspective(4em)rotateX(3deg);
+    position: absolute;
+    left: 500px;
+}
+/*********第三个*/
+.star_wars> .pic-style-second{
+    width:180px;
+    height:250px;
+    transform:skewX(10deg);
+    overflow: hidden;
+    transition: all .8s linear;
+    border: none;;
+    position: absolute;
+    left: 800px;
+}

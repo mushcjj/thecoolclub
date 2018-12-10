@@ -1,0 +1,47 @@
+.my_xl{
+    position:relative;
+}
+.my_cart{
+    background: #babbbb;
+    height: 0;
+    width: 350px;
+    position:absolute;
+    right:-48px;
+    overflow:hidden;
+    transition:all 1s linear;
+}
+.my_xl:hover .my_cart{
+       height:600px;
+}
+.hh{
+position:fixed;
+}
+.my_body{
+position:absolute;
+}
+.my_k{
+    margin:50px 60px;
+    overflow: hidden;
+}
+.my_btn{
+    background: #1b1e21;
+    margin-left:110px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.my_gui{
+    width:15px;
+    height:15px;
+}
+.my_order{
+    margin-top:15rem;
+}
+.my_ld{
+    width:15px;
+    height:15px;
+}
+.bg_p6 {
+    margin-bottom: -160px;
+    background: #979798;
+
+}

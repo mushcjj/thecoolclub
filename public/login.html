@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/base.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/axios.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/qs.min.js"></script>
+    <script>
+        window.onload=function(){
+            o.imgRandom();
+        }
+        let o={
+            aImg:["img/2cv@2x.png","img/787b@2x.png","img/1800es@2x.png","img/albert@2x.png","img/alfa@2x.png","img/alpine@2x.png","img/amy@2x.png","img/andrea@2x.png","img/andywar@2x.png","img/anna@2x.png","img/Asset-1@2x(1).png","img/Asset-1@2x(2).png","img/Asset-1@2x.png","img/Asset-1@2x-1(1).png","img/Asset-1@2x-1.png","img/Asset-1@2x-2(1).png","img/Asset-1@2x-2.png","img/Asset-1@2x-3.png","img/Asset-1@2x-4.png","img/Asset-1@2x-5.png","img/Asset-1@2x-6.png","img/Asset-1@2x-8.png","img/Asset-1@2x-9.png","img/Asset-1@2x-10.png","img/Asset-1@2x-11.png","img/Asset-1@2x-12.png","img/Asset-1@2x-13.png","img/Asset-1@2x-14.png","img/Asset-1@2x-15.png","img/Asset-1@2x-16.png","img/Asset-1@2x-17.png","img/Asset-1@2x-18.png","img/Asset-1@2x-19.png","img/Asset-1@2x-20.png","img/Asset-1@2x-21.png","img/Asset-1@2x-22.png","img/Asset-1@2x-23.png","img/Asset-1@2x-24.png","img/Asset-1@2x-25.png","img/Asset-1@2x-26.png","img/Asset-1@2x-27.png","img/Asset-1@2x-28.png","img/Asset-1@2x-29.png","img/Asset-1@2x-30.png","img/Asset-1@2x-31.png","img/Asset-1@2x-32.png","img/Asset-1@2x-33.png","img/Asset-1@2x-34.png","img/Asset-1@2x-35.png"],
+            abg:["#b29ccb","#eaeaea","#b671a0","#6f6b62","#675851","#ed73aa","#fff2e0","#c6e0ba","#d2e8dc","#fcd4a4","rgb(106,206,189)","rgb(249,200,129)","rgb(237,244,249)","rgb(255,131,62)","rgb(218,174,125)","rgb(115,179,255)","rgb(177,173,209)","rgb(115,179,255)","rgb(255, 62, 62)","rgb(234,234,234)","rgb(218, 255, 194)","rgb(141, 110, 99)","rgb(178, 235, 242)","rgb(224,224,224)","rgb(166, 255, 217)","rgb(165, 137, 111)","rgb(17, 17, 53)","rgb(107, 107, 127)","rgb(224, 224, 224)","rgb(230, 238, 156)","rgb(185, 246, 202)","rgb(137, 107, 77)","rgb(182, 221, 214)","rgb(255, 150, 46)","rgb(38, 198, 218)","rgb(215, 242, 219)","rgb(149, 117, 205)","rgb(239, 83, 80)","rgb(255, 213, 110)","rgb(230, 238, 156)","rgb(215, 204, 200)","rgb(224, 242, 241)","rgb(255, 238, 88)","rgb(215, 202, 255)","rgb(169, 235, 255)","rgb(61, 61, 160)","rgb(192, 216, 255)","rgb(255, 238, 166)"],
+            imgRandom:function(){
+                let img=document.getElementsByTagName("img")[0];
+                let bg=document.getElementById("log_pic_bg");
+                let b=Math.floor(Math.random()*(this.aImg.length));
+                img.src=this.aImg[b];
+                bg.style.background=this.abg[b];
+            }
+        }
+
+    </script>
+</head>
+<body>
+  <div class="row login-body" style="margin-right:0;margin-left:0;">
+      <!--随机图片-->
+      <div class="col-7 login-left" style="margin-right:0;margin-left:0;">
+
+          <div class="pic-border">
+              <div class="pic" id="log_pic_bg">
+                      <img src="">
+              </div>
+          </div>
+      </div>
+
+
+      <!--登录信息-->
+      <div class="col-5 login-right" style="margin-right:0;margin-top:0;">
+          <ul class="log" id="app-login">
+              <li>
+                  <input type="text" placeholder="Name" v-model="uname">
+              </li>
+              <li class="mt-4">
+                  <input type="password" placeholder="Password" v-model="upwd">
+              </li>
+              <li class="mt-2">
+                  <a href="reg.html">Not register?</a>
+              </li>
+              <li class="mt-2">
+                  <input type="button" value="Login" class="log-sub" @click="signin">
+              </li>
+          </ul>
+      </div>
+  </div>
+  
+
+  <script>
+      new Vue({
+        el:"#app-login",
+        data(){
+            return{
+                uname:"",
+                upwd:""
+            }
+        },
+        methods:{
+            signin(){
+               (async ()=>{
+                    var res=await axios.post(
+                        "http://localhost:9090/users/signin",
+                        Qs.stringify({uname:this.uname,upwd:this.upwd})
+                    ) 
+                    res=res.data;
+                    if(res.ok==0)
+                        alert(res.msg)
+                    else{
+                        alert("Login successfully！");
+                        sessionStorage.setItem("uid",res.res.uid)
+                        console.log(res.res.uid)
+                        
+                        if(location.search.startsWith("?back=")){
+                            var url=location.search.slice(6) 
+                        }else{
+                            var url="index.html"
+                        }
+                        location.href=url;
+                    }  
+                })()
+            }
+           
+        }
+      })
+  </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+.planet>img {
+        /*调用动画*/
+        animation:myfirst 28s linear infinite;
+        -webkit-animation:myfirst 28s linear infinite;
+        animation-play-state:running;
+        -webkit-animation-play-state:running;
+        margin-top: -200px;
+        margin-left: 158px;
+        }
+/*鼠标悬浮图动画停止*/
+.planet>img:hover {animation-play-state:paused; -webkit-animation-play-state:paused;}
+/*声明动画*/
+@keyframes myfirst {0% {transform:rotate(0deg);} 100% {transform:rotate(20deg);}}
+@-webkit-keyframes myfirst {0% {transform:rotate(0deg);} 100% {transform:rotate(20deg);}}
+
+/*调整星球的位置*/
+/*.planet>img >.first-planet{
+        /*margin-left: 990px;margin-top: 200px
+}*/

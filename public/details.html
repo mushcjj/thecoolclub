@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/details.css"/>
+    <link rel="stylesheet" href="css/base.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/e.js"></script>
+    <script src="js/axios.min.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+    <title></title>
+
+</head>
+<body>
+    <header id="header"></header>
+    <table></table>
+
+    <div id="app-details">
+        <div class="cars row"  >
+            <div class="left col-7" style="padding:0;">
+                <div class="bg-color" :style=`background:${details.color};`></div>
+                <div class="car" >
+                    <div class="picture">
+                        <img :src=`img/${details.pic}` :style=`background:${details.color}`>
+                    </div>
+                </div>
+            </div>
+            <div class="right col-5" style="padding:0;">
+                <div class="car_name font-weight-bold "><a href="#" v-cloak v-text="fname"></a>/<span v-cloak v-text="details.title"></span></div>
+                <hr class="first"/>
+                <div class="question">
+                    <ol>
+                        <li>What size of poster do you like?
+                            <select id="size">
+                                <option value="size">A3</option>
+                                <option value="size">A4</option>
+                            </select>
+                        </li>
+                        <hr/>
+
+                        <li>Do you want a cool black frame?
+                            <div class="bai down">√</div>
+                        </li>
+                        <hr/>
+
+                        <li>Nice! How many do you want?
+                            <button class="sub" @click="del">-</button>
+                            <input type="text" v-model="count" class="count">
+                            <button class="add" @click="add">+</button>
+                        </li>
+                        <hr/>
+                    </ol>
+                </div>
+                <div class="price">
+                    <ul>
+                        <li>Delivery within 2 / 3 work days.</li>
+                        <li>Free NL Shipping from €49, Free EU Shipping from €69.
+                        </li>
+                    </ul>
+                </div>
+                <div class="botton">
+                    <div class="white">
+                        €<span v-cloak v-text="price"></span>
+                    </div>
+                    <div class="black btn btn-dark" @click="addToCart">
+                        <span>Add to your bag</span>     
+                        <span v-if="islogin">🤘🤘🤘🤘🤘🤘</span>
+                        <span v-else>👎👎👎👎</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+        <!-- info-start-->
+        <div class=" info">
+            <div class="left">
+                <div class="row one three">
+                    <div class="col-12 "><span>Frame details</span></div>
+                </div>
+                <div class="row one">
+                    <div class="col-12 two">Gallery-quality art print in an aluminium frame. Our black frames have a matte finish and are fitted with acrylic glass. </div>
+                </div>
+                <div class="row one three">
+                    <div class="col-12 two">Comes with brackets for hanging.</div>
+                </div>
+                <div class="row one">
+                    <div class="col-1">Sizes</div>
+                    <div class="col-11 two">A4 & A3</div>
+                </div>
+                <div class="row one">
+                    <div class="col-1">Paper</div>
+                    <div class="col-11 two">Offset 250 grs/m2 | 4/0 full colour</div>
+                </div>
+                <div class="row one">
+                    <div class="col-1">Finish</div>
+                    <div class="col-11 two">Matte</div>
+                </div>
+                <div class="row one">
+                    <div class="col-1">Frame</div>
+                    <div class="col-11 two">Black aluminum frame with acrylic glass</div>
+                </div>
+                <div class="row one">
+                    <div class="col-1">Colour</div>
+                    <div class="col-11 two">12-colour digital printing</div>
+                </div>
+            </div>
+            <div class="right">
+                <img src="img/frame.33e2c62.jpg" alt=""/>
+            </div>
+        </div>
+        
+        <!--轮播-->
+        <div>
+            <div class="bg-opa" :style=`background:${this.pbg}`></div>
+            <div class="random">
+                <div class="containera">
+                    <p class="heade">{{fname}}</p>
+                    <ul >  
+                        <li v-for="item in products">
+                            <a href="">
+                                <div class="bg">
+                                    <img :src=`img/${item.pic}`>
+                                </div>
+                                <div class="bg-pic" :style=`background:${item.color}`></div>
+                                <div class="title">
+                                    <p>{{item.title}}</p>
+                                    <p>€16.95</p>
+                                </div>
+                            </a>
+                        </li> 
+                    </ul>
+                    <a href="javascript:" class="slide-z disabled" @click="pdel"></a>
+                    <a href="javascript:" class="slide-y" @click="padd"></a>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    
+
+<footer id="footer"></footer>
+    <script src="js/details.js"></script>
+</body>
+</html>
